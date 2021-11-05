@@ -3,7 +3,7 @@ import AudioPlayer from "./components/AudioPlayer";
 import Footer from "./components/Footer";
 import HeroPluniverse from "./components/HeroPluniverse";
 import NavBar from './components/NavBar'
-import DotLoader from "react-spinners/ClipLoader";
+import DotLoader from "react-spinners/DotLoader";
 
 function App() {
   const [loading, setLoading] = useState(false);

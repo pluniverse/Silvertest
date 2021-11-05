@@ -11,11 +11,11 @@ function Footer() {
     <footer className={styles.footer}>
         <div className={styles.socialIcons}>
           <ul>
-            <li> <a href="https://twitter.com"><img src={TwitterIcon} alt="Twitter" /></a> </li> 
-            <li> <a href="https://discord.com"><img src={DiscordIcon} alt="Discord" /></a> </li> 
-            <li> <a href="https://instagram.com"><img src={InstagramIcon} alt="InstagramIcon" /></a> </li> 
-            <li> <a href="https://facebook.com"><img src={FacebookIcon} alt="FacebookIcon" /></a> </li> 
-            <li> <a href="https://telegram.com"><img src={TelegramIcon} alt="TelegramIcon" /></a> </li> 
+            <li> <a href="https://twitter.com/pluniversegame"><img src={TwitterIcon} alt="Twitter" /></a> </li> 
+            <li> <a href="https://discord.gg/akYEh8KDGg/"><img src={DiscordIcon} alt="Discord" /></a> </li> 
+            <li> <a href="https://instagram.com/pluniversegame"><img src={InstagramIcon} alt="InstagramIcon" /></a> </li> 
+            <li> <a href="https://facebook.com/pluniversegame"><img src={FacebookIcon} alt="FacebookIcon" /></a> </li> 
+            <li> <a href="https://t.me/pluniversegame"><img src={TelegramIcon} alt="TelegramIcon" /></a> </li> 
           </ul>
         </div>
         <br />
