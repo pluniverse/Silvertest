@@ -1,39 +1,35 @@
-import HeroPluniverse from './components/HeroPluniverse';
-import Header from './components/Header';
-import AudioPlayer from './components/AudioPlayer';
-import WidthContainer from './components/WidthContainer';
-import Footer from './components/Footer';
-import Loading from 'react-fullscreen-loading';
-import { useEffect, useState } from 'react';
+import React, {useState, useEffect} from 'react';
+import AudioPlayer from "./components/AudioPlayer";
+import Footer from "./components/Footer";
+import HeroPluniverse from "./components/HeroPluniverse";
+import NavBar from './components/NavBar'
+import DotLoader from "react-spinners/ClipLoader";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    var readyStateCheckInterval = setInterval(function () {
-      if (document.readyState === 'complete') {
-        clearInterval(readyStateCheckInterval);
-        setLoading(false);
-      }
-    }, 10);
-  }, []);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(()=> {
+    setLoading(true)
+    setTimeout(() =>{
+      setLoading(false)
+    }, 4000)
+  }, [])
+
   return (
     <div className="App">
-      <Loading loading={loading} background="#4a9ec6" loaderColor="#FFF" />
-      <div className="container">
-        <WidthContainer>
-          <Header />
-        </WidthContainer>
-
-        <WidthContainer>{!loading && <AudioPlayer />}</WidthContainer>
-
-        <div style={{ flex: 1 }}>
-          <HeroPluniverse />
-        </div>
-
-        <WidthContainer>
-          <Footer />
-        </WidthContainer>
+      {
+          loading ?
+          <div className = "Loader">
+            <DotLoader color={'#36D7B7'} loading={loading} size={60} />
+          </div>
+        :
+        <div className="container">
+        <NavBar/>
+        <AudioPlayer/>
+        <HeroPluniverse />
+        <Footer/>
       </div>
+      }
     </div>
   );
 }
